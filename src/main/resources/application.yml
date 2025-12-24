@@ -1,0 +1,23 @@
+server:
+  port: 8780
+  servlet:
+    context-path: /demo123
+  error:
+    whitelabel:
+      enabled: false
+  ssl:
+    enabled: ${SSL_ENABLED:true}
+    key-store: ${SSL_KEY_STORE:classpath:ssl/keystore.p12}
+    key-store-password: ${SSL_KEY_STORE_PASSWORD:123456}
+    keyStoreType: ${SSL_KEY_STORE_TYPE:PKCS12}
+    keyAlias: ${SSL_KEY_ALIAS:myapp}
+spring:
+  application:
+    name: demo
+  profiles:
+    active: dev,myconfig
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
