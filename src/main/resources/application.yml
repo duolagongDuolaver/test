@@ -14,8 +14,6 @@ server:
 spring:
   application:
     name: demo
-  profiles:
-    active: dev,myconfig
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
   mvc:
