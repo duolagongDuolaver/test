@@ -21,3 +21,4 @@ spring:
       matching-strategy: ant_path_matcher
     test: tsdd
     test2: newbrach
+    test3: newbrach3
